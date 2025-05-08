@@ -1,34 +1,34 @@
 body {
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-  }
-  
-  .container {
-    perspective: 1500px;
-  }
-  
-  .card {
-    width: 3000px;
-    height: 3000px;
-    transform-style: preserve-3d;
-    transition: transform 1s;
-    position: relative;
-    cursor: pointer;
-  }
-  
-  .card img {
-    width: 3000px;
-    height: 3000px;
-    position: absolute;
-    backface-visibility: hidden;
-    border-radius: 10px;
-  }
-  
-  .card .back {
-    transform: rotateY(180deg);
-  }
-  
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 40px; /* Add some space around the card */
+  box-sizing: border-box;
+}
+
+.container {
+  perspective: 1500px;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.card {
+  width: 90vmin;
+  height: 90vmin;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+}
