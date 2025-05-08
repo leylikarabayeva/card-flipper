@@ -1,21 +1,21 @@
 body {
   background-color: black;
   margin: 0;
-  padding: 0;
+  padding: 40px; /* Adds padding around the card */
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100dvh; /* Use dynamic viewport height */
+  height: 100dvh;
   box-sizing: border-box;
 }
 
-/* Responsive square container */
+/* Smaller, square container */
 .container {
   perspective: 1000px;
-  width: min(80vw, 80vh);   /* Scale to smaller side of screen */
-  height: min(80vw, 80vh);
-  max-width: 500px;
-  max-height: 500px;
+  width: min(40vw, 40vh);   /* 50% of original 80vw/vh */
+  height: min(40vw, 40vh);
+  max-width: 300px;
+  max-height: 300px;
 }
 
 /* Flippable card */
@@ -29,7 +29,7 @@ body {
   touch-action: manipulation;
 }
 
-/* Card images */
+/* Card faces */
 .card img {
   position: absolute;
   width: 100%;
@@ -40,8 +40,7 @@ body {
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
-/* Back face styling */
+/* Back face rotation */
 .card .back {
   transform: rotateY(180deg);
 }
-
